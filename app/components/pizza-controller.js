@@ -1,28 +1,22 @@
-import PizzaService from "./pizza-service";
+import PizzaService from "./pizza-service.js";
 
 let _pizzaService = new PizzaService()
 
-function drawToppings() {
-  let template = ''
-  let pizza = _pizzaService.getPizza()
 
-  template += `
-    <div class="col-pizza">
-    <img src="${pizza.img}"/>
-    <h5>${pizza.name}</h5>
-    <button class="btn btn-primary" onclick="app.controller.pizzaController.purchase(${''})">Purchase: ${pizza.purchase}</button>
-    </div>
-    `
-  document.getElementById('main-content').innerHTML = template
-}
+function drawTotal() {
+  let total = _pizzaService.getTotal()
 
-function drawMoney() {
-  let balance = _pizzaService.getBalance()
-
+  document.getElementById('balance').innerHTML = total.toString()
 }
 
 export default class PizzaController {
   constructor() {
-    drawMoney()
+
+  }
+  addTopping(toppingName) {
+    _pizzaService.addTopping(toppingName)
+  }
+  getTotal() {
+    document.getElementById('balance').innerText = _pizzaService.getTotal().toString()
   }
 }

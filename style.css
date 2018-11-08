@@ -1,3 +1,6 @@
 body {
   background-color: lightblue;
 }
+#balance {
+  font-size: 40px;
+}

@@ -16,24 +16,29 @@
 
 <body>
   <h1>MAKE YOUR SOON TO EAT PIZZA!</h1>
+  <h2>Pizza Starting Price $5. Just Add Toppings!</h2>
 
   <div id=("main-content")></div>
 
   <div class="container">
     <div class="row">
       <div class="col-12 text-right">
-        <p>Balance Owed</p>:<span id="balance">...</span></p>
+        <p>$ BALANCE YOU OWE $ </p>:<span id="balance">$0</span></p>
       </div>
     </div>
   </div>
 
-  <div id="app" <button class="btn btn-primary" onchange="app.controllers.pizzaController.showPizza()">Pepperoni .50</div>
-  <div id="app" <button class="btn btn-primary" onchange="app.controllers.pizzaController.showPizza()">Extra Cheese1.00
+  <div id="app" <button class="btn btn-primary" onclick="app.controllers.pizzaController.addTopping('pepperoni')">Pepperoni
+    .50</div>
+  <div id="app" <button class="btn btn-primary" onclick="app.controllers.pizzaController.addTopping('extraCheese')">Extra
+    Cheese.50
   </div>
-  <div id="app" <button class="btn btn-primary" onchange="app.controllers.pizzaController.showPizza()">Sausage 1.00
+  <div id="app" <button class="btn btn-primary" onclick="app.controllers.pizzaController.addTopping('sausage')">Sausage
+    .50
   </div>
-  <div id="app" <button class="btn btn-primary" onchange="app.controllers.pizzaController.showPizza()">Pineapple 2.00</div>
-  <div id="app" <button class="btn btn-primary" onchange="app.controllers.pizzaController.showPizza()">ORDER</div>
+  <div id="app" <button class="btn btn-primary" onclick="app.controllers.pizzaController.addTopping('pineapple')">Pineapple
+    .50</div>
+  <div id="app" <button class="btn btn-primary" onclick="app.controllers.pizzaController.getTotal()">ORDER</div>
 
 
 
