@@ -3,5 +3,6 @@ export default class Pizza {
     this.name = "large pizza"
     this.toppings = []
     this.total = 0
+    this.balance = []
   }
 }
